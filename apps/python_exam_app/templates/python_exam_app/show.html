@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form action="show">
+            <table>
+                <tr>
+                    <td>
+                        <strong>{{Trip.destination}}</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Planned By: {{users.name}}</td>
+                </tr>
+                <tr>
+                    <td>Description: {{Trip.description}}</td>
+                </tr>
+                <tr>
+                    <td>Travel Date From: {{Trip.travel_start_date}}</td>
+                </tr>
+                <tr>
+                    <td>Travel Date To: {{Trip.travel_end_date}}</td>
+                </tr>
+            </table>
+            <a href="/dashboard">Home</a> |
+            <a href="/">Logout</a>
+        </form>
+
+    </div>
+</body>
+
+</html>

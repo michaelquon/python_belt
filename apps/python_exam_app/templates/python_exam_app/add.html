@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Add a Trip</h1>
+        <form action="/addes" method="post">
+            {% csrf_token %}
+            <label for="first_name">Destination:
+                <input type="text" name="destination" id="destination">
+            </label>
+            <label for="last_name">Description:
+                <input type="text" name="description" id="description">
+            </label>
+            <label for="email">Travel Date From:
+                <input type="date" name="travelFrom" id="travelTo">
+            </label>
+            <label for="email">Travel Date To:
+                <input type="date" name="travelTo" id="travelTo">
+            </label>
+            <input type="submit" name="add" id="add" value="Add">
+            <a href="/dashboard">Home</a>
+            <a href="/">Logout</a>
+        </form>
+    </div>
+</body>
+
+</html>

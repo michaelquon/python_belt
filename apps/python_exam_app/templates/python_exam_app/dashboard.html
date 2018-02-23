@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        {%for users in all_user%}
+        <h1>Hello {{users.name}}</h1>
+        {%endfor%}
+        <form action="/">
+        <table>
+            <tr>
+                <h3>Your Trip Schedule</h3>
+                <th>Destination</th>
+                <th>Travel Start Date</th>
+                <th>Travel End Date</th>
+                <th>Plan</th>
+            </tr>
+            <tr>
+                
+                {%for trips in all_trip%}
+                <td>{{trips.destination}}</td>
+                <td>{{ trips.travel_start_date }}</td>
+                <td>{{ trips.travel_start_date }}</td>
+                <td>{{ trips.plan }}</td> 
+                <td><a href=""> </a><a href=""> </a><a href=""> </a></td>
+              </tr>
+              {% endfor %}
+        </table>
+        <table>
+            <tr>
+                <h3>Other User's Travel Plan</h3>
+                <th>Name</th> 
+                <th>Destination</th>
+                <th>Travel Start Date</th>
+                <th>Travel End Date</th>
+                <th>Do you Want to Join</th>
+                
+            </tr>
+            <tr>
+                <td>{{users.name}}</td>
+                <td>{{trips.destination}}</td>
+                <td>{{ trips.travel_start_date }}</td>
+                <td>{{ trips.travel_end_date }}</td> 
+                
+              </tr>
+              
+        </table>
+
+        <a href="/add">Add Travel Plan</a>
+        </form>
+    </div>
+</body>
+</html>
